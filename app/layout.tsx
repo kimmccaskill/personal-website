@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://example.com"),
+  metadataBase: new URL("https://kimmccaskill.com"),
   title: {
     default: "Kim McCaskill | Front End Engineer",
     template: "%s | Kim McCaskill",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: "Kim McCaskill | Front End Engineer",
     description:
       "Personal website for Kim McCaskill - front end engineer building fast, thoughtful web experiences.",
-    url: "https://example.com",
+    url: "https://kimmccaskill.com",
     siteName: "Kim McCaskill",
     locale: "en_US",
     type: "website",
