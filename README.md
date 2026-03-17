@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kim McCaskill Portfolio
 
-## Getting Started
+Personal portfolio site for Kim McCaskill, built with Next.js, TypeScript, Tailwind CSS, and reusable UI components.
 
-First, run the development server:
+Live site: [https://kimmccaskill.com](https://kimmccaskill.com)
+
+## Overview
+
+This site is designed to be:
+
+- Fast and SEO-friendly
+- Easy to maintain and customize
+- Responsive across mobile and desktop
+- Accessible with dark mode and reduced-motion support
+
+Core sections include:
+
+- Home
+- About
+- Projects
+- Experience
+- Contact
+
+## Tech Stack
+
+- Next.js (App Router)
+- React
+- TypeScript
+- Tailwind CSS
+- `next-themes` for dark mode
+- `class-variance-authority`, `clsx`, `tailwind-merge` for UI variants/class management
+- `lucide-react` icons
+
+## Project Structure
+
+```txt
+app/
+  globals.css
+  layout.tsx
+  page.tsx
+components/
+  ui/
+  contact-cta.tsx
+  experience-item.tsx
+  project-card.tsx
+  reveal-on-scroll.tsx
+  section-heading.tsx
+  site-header.tsx
+  theme-provider.tsx
+  theme-toggle.tsx
+data/
+  site.ts
+lib/
+  utils.ts
+public/
+  Kim_McCaskill_Resume.pdf
+```
+
+## Local Development
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start dev server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run dev      # Start development server
+npm run build    # Create production build
+npm run start    # Run production server
+npm run lint     # Run ESLint
+```
 
-## Learn More
+## Content Customization
 
-To learn more about Next.js, take a look at the following resources:
+Most content is managed in `data/site.ts`:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Personal info (name, role, email, intro, about)
+- Social links
+- Skills
+- Project entries
+- Experience entries
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Page layout/section order is in `app/page.tsx`.
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This site is deployed on Vercel and connected to a Squarespace-managed domain.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Typical flow:
+
+1. Push updates to `main`
+2. Vercel auto-deploys
+3. Verify production at `kimmccaskill.com`
+
+## Notes
+
+- Resume download is served from `public/Kim_McCaskill_Resume.pdf`.
+- Metadata and Open Graph settings are in `app/layout.tsx`.
