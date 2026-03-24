@@ -21,8 +21,11 @@ export default function Home() {
                 <div>
                   <p className="text-sm text-muted-foreground">{siteConfig.location}</p>
                   <h1 className="mt-4 max-w-3xl text-3xl font-semibold tracking-tight sm:text-5xl">
-                    {siteConfig.name} - {siteConfig.role}
+                    {siteConfig.name}
                   </h1>
+                  <p className="mt-2 text-base font-medium text-muted-foreground sm:text-xl">
+                    {siteConfig.role}
+                  </p>
                   <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
                     {siteConfig.intro}
                   </p>
