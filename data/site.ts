@@ -4,6 +4,13 @@ export const siteConfig = {
   location: "Remote / US",
   email: "kimmccaskill92@gmail.com",
   resumeHref: "/Kim_McCaskill_Resume.pdf",
+  headshotSrc: "/images/kim-headshot.png",
+  headshotAlt: "Portrait of Kim McCaskill smiling",
+  teachingPhotoSrc: "/images/kim-teaching.png",
+  teachingPhotoAlt:
+    "Kim McCaskill teaching children how to play brass instrument at music camp",
+  japanPhotoSrc: "/images/kim-japan.png",
+  japanPhotoAlt: "Kim McCaskill visiting a garden in Japan",
   intro:
     "Welcome! My name is Kim and I am a Software Developer with a focus on Front-End technologies.",
   about:
