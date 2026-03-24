@@ -9,7 +9,7 @@ export function ContactCta() {
       </h3>
       <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
         I am open to select freelance, product, and full-time opportunities.
-        Send a note and let us make something useful.
+        Send a note and let's make something useful.
       </p>
       <div className="mt-6 flex flex-wrap gap-3">
         <Button asChild>
