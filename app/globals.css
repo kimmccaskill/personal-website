@@ -1,16 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f9fafb;
-  --foreground: #0b1220;
-  --card: #ffffff;
-  --card-foreground: #0b1220;
-  --muted: #dbe3ee;
-  --muted-foreground: #334155;
-  --border: #cbd5e1;
-  --primary: #0b1220;
-  --primary-foreground: #f8fafc;
-  --ring: #0b1220;
+  --background: #faf5ec;
+  --foreground: #2b2118;
+  --card: #fffdf7;
+  --card-foreground: #2b2118;
+  --muted: #f0e6d6;
+  --muted-foreground: #6f6150;
+  --border: #e4d7c3;
+  --primary: #bc4b27;
+  --primary-foreground: #fff6ee;
+  --accent: #f6e3d3;
+  --accent-foreground: #8a3517;
+  --ring: #bc4b27;
 }
 
 @theme inline {
@@ -23,29 +25,47 @@
   --color-border: var(--border);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
   --color-ring: var(--ring);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-fraunces);
 }
 
 .dark {
-  --background: #01040f;
-  --foreground: #e6edf7;
-  --card: #0f1b33;
-  --card-foreground: #e6edf7;
-  --muted: #1a2942;
-  --muted-foreground: #a3b6cf;
-  --border: #2d3f5c;
-  --primary: #f1f5f9;
-  --primary-foreground: #01040f;
-  --ring: #d6e0ee;
+  --background: #181210;
+  --foreground: #f1e8da;
+  --card: #221a15;
+  --card-foreground: #f1e8da;
+  --muted: #2f251d;
+  --muted-foreground: #b5a48e;
+  --border: #3b2f25;
+  --primary: #e0784a;
+  --primary-foreground: #2a130a;
+  --accent: #3a2316;
+  --accent-foreground: #f0a984;
+  --ring: #e0784a;
 }
 
 body {
-  background: var(--background);
+  background:
+    radial-gradient(
+      70rem 45rem at 85% -12%,
+      color-mix(in oklab, var(--primary) 7%, transparent),
+      transparent 60%
+    ),
+    var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-fraunces), Georgia, serif;
+  letter-spacing: -0.015em;
 }
 
 * {
@@ -53,9 +73,9 @@ body {
 }
 
 ::selection {
-  background: color-mix(in oklab, var(--primary) 20%, transparent);
+  background: color-mix(in oklab, var(--primary) 25%, transparent);
 }
 
 .section {
-  @apply mx-auto w-full max-w-6xl px-4 py-8 sm:px-6 md:py-10;
+  @apply mx-auto w-full max-w-6xl px-4 py-12 sm:px-6 md:py-16;
 }

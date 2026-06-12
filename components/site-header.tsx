@@ -9,7 +9,7 @@ export function SiteHeader() {
       <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link
           href="#home"
-          className="font-semibold tracking-tight transition-opacity hover:opacity-80"
+          className="font-display text-lg font-semibold italic tracking-tight transition-colors hover:text-primary"
         >
           {siteConfig.name}
         </Link>

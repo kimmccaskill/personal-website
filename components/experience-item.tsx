@@ -1,5 +1,3 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
 type ExperienceItemProps = {
   company: string;
   role: string;
@@ -14,18 +12,19 @@ export function ExperienceItem({
   description,
 }: ExperienceItemProps) {
   return (
-    <Card>
-      <CardHeader className="space-y-3">
-        <div className="flex flex-wrap items-center justify-between gap-2">
-          <CardTitle className="text-lg">
-            {role} <span className="text-muted-foreground">@ {company}</span>
-          </CardTitle>
-          <p className="text-sm text-muted-foreground">{period}</p>
-        </div>
-      </CardHeader>
-      <CardContent>
-        <p className="text-sm leading-relaxed text-muted-foreground">{description}</p>
-      </CardContent>
-    </Card>
+    <article className="grid gap-2 border-t border-border py-8 md:grid-cols-[200px_1fr] md:gap-8">
+      <p className="font-mono text-xs uppercase tracking-wide text-muted-foreground md:pt-1.5">
+        {period}
+      </p>
+      <div className="max-w-2xl">
+        <h3 className="text-xl font-semibold tracking-tight">
+          {role}{" "}
+          <span className="font-display italic text-primary">@ {company}</span>
+        </h3>
+        <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
+          {description}
+        </p>
+      </div>
+    </article>
   );
 }
